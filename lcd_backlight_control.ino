@@ -17,13 +17,13 @@ void setup() {
     backLight.initialize();
 }
 
-static std::uint8_t output = 0;
+static std::uint8_t brightness = 0;
 void loop() {
-    std::uint8_t maxOutput = backLight.getMaxOutput();
-    output += 1;
-    if( output > maxOutput ) {
-        output = 0;
+    std::uint8_t maxBrightness = backLight.getMaxBrightness();
+    brightness += 1;
+    if( brightness > maxBrightness ) {
+        brightness = 0;
     }
-    backLight.setOutput(output);
+    backLight.setBrightness(brightness);
     delay(50);
 }
