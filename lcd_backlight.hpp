@@ -80,7 +80,7 @@ public:
         PORT->Group[2].DIRSET.reg = (1<<5);
         PORT->Group[2].EVCTRL.reg = 0x85; // PC05, OUT
         /* Configure EVSYS */
-	    EVSYS->USER[1].reg = 0x01;  // Channel0 -> PORT_EV0
+        EVSYS->USER[1].reg = 0x01;  // Channel0 -> PORT_EV0
         EVSYS->Channel[0].CHANNEL.reg = 0x74 | (0x02<<8) | (0x00<<10);  // CCL_LUTOUT0, ASYNCHRONOUS, NO_EVT_OUTPUT
         /* Configure CCL */
         CCL->CTRL.reg = (1<<0); // SWRST
